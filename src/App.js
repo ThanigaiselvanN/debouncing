@@ -102,14 +102,14 @@ const handleChange = (event) => {
           <CircularProgress />
         </Box>
       )}
-      {!loading && !empty && !inputRef?.current?.value && (
+      {!loading && !inputRef?.current?.value && (
         <Box sx={{ display: "flex" }}>
           <Typography gutterBottom variant="h5" component="div">
-            Please enter the dog breed name to search for......
+            Please enter the dog breed name...
           </Typography>
         </Box>
       )}
-      {(empty || error) && (
+      {((empty || error) && inputRef?.current?.value.length !==0) && (
         <Box sx={{ display: "flex" }}>
           <Typography
             gutterBottom
